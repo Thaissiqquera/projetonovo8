@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Marketing - GTS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Análise de Marketing</h1>
+        <h2>Giulia Guglielmo, Sofia Wrobel, Thais Lagoas</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button id="btn-clusters" class="active">Análise de Clusters</button></li>
+            <li><button id="btn-campanhas">Análise de Campanhas</button></li>
+            <li><button id="btn-regressao">Regressão Linear</button></li>
+            <li><button id="btn-clv">Customer Lifetime Value</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="clusters" class="active">
+            <h2>Análise de Clusters</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Visualização dos Clusters</h3>
+                    <div id="clusters-viz" class="chart-container"></div>
+                </div>
+                <div class="card">
+                    <h3>Diagnóstico por Cluster</h3>
+                    <div id="clusters-info" class="info-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="campanhas">
+            <h2>Análise de Campanhas</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>ROI Estimado por Campanha</h3>
+                    <canvas id="campanhas-roi" class="chart-container"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Gasto Médio por Cliente</h3>
+                    <canvas id="campanhas-gasto" class="chart-container"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="regressao">
+            <h2>Análise de Regressão Linear</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Coeficientes - Campanhas</h3>
+                    <canvas id="coef-campanhas" class="chart-container"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Coeficientes - Perfil do Cliente</h3>
+                    <canvas id="coef-clientes" class="chart-container"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="clv">
+            <h2>Customer Lifetime Value (CLV)</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Distribuição de CLV</h3>
+                    <canvas id="clv-dist" class="chart-container"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Estatísticas de CLV</h3>
+                    <div id="clv-stats" class="info-container"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data Marketing - GTS © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
